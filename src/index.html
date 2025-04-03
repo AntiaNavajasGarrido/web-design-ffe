@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-business | Soluciones Empresariales Integrales</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Actualización de Font Awesome a versión 6.4.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Cabecera -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="logo-ebusiness.png" alt="E-business Logo">
+                <h1>E-business</h1>
+            </div>
+            <div class="contact-header">
+                <p><i class="fas fa-mobile-alt"></i> Móvil: 637 766 491</p>
+                <p><i class="fas fa-envelope"></i> info@e-business.com.es</p>
+            </div>
+        </div>
+    </header>
+    <!-- Menú de Navegación -->
+    <nav>
+        <div class="nav-container">
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu" id="mainMenu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="energia.html">E-nergya</a></li>
+                <li><a href="inmobiliaria.html">E-state</a></li>
+                <li><a href="produccion.html">E-produccion</a></li>
+                <li><a href="moda.html">E-skorpion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Contenido principal -->
+    <main>
+        <!-- Slider para el contenido-->
+        <section class="slider">
+            <div class="slider-container">
+                <div class="slider-item">
+                    <a href="https://www.youtube.com/watch?v=217PWQlTYMI" class="slider-link">
+                        <img src="public\img\1132084.jpg" alt="Imagen 1" class="slider-image">
+                    </a>
+                </div>
+                <div class="slider-item">
+                    <a href="https://www.youtube.com/watch?v=ALgDxZZLDbA" class="slider-link">
+                        <img src="public\img\1338843.png" alt="Imagen 2" class="slider-image">
+                    </a>
+                </div>
+                <div class="slider-item">
+                    <a href="https://www.youtube.com/watch?v=afI-E63m5Ag" class="slider-link">
+                        <img src="public\img\1350899.png" alt="Imagen 3" class="slider-image">
+                    </a>
+                </div>
+            </div>
+            <div class="slider-navigation">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </section>
+    </main>
+    <!-- Pie de Página -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo-ebusiness-white.png" alt="E-business Logo">
+                <p>Soluciones integrales para tu negocio</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/e-business" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ebusiness" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ebusiness" target="_blank" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.facebook.com/ebusiness" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/ebusiness" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Nuestro equipo</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Aviso legal</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Divisiones</h4>
+                <ul>
+                    <li><a href="energia.html">E-nergya</a></li>
+                    <li><a href="inmobiliaria.html">E-state</a></li>
+                    <li><a href="produccion.html">E-produccion</a></li>
+                    <li><a href="moda.html">E-skorpion</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 E-business. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script>
+        // Menú móvil
+        document.getElementById('menuToggle').addEventListener('click', function () {
+            document.getElementById('mainMenu').classList.toggle('active');
+        });
+    </script>
+    <script>
+        //Slider
+        let currentIndex = 0;
+        // Selecciona cada imagen como individual
+        const images = document.querySelectorAll('.slider-item');
+        const totalImages = images.length;
+        // Mueve al siguiente índice de la imagen
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateSlider();
+        }
+        // Mueve al índice anterior
+        function showPrevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateSlider();
+        }
+        //Para el desplazamiento de las imágenes
+        function updateSlider() {
+            const offset = -currentIndex * 100;
+            document.querySelector('.slider-container').style.transform = `translateX(${offset}%)`;
+        }
+        // Evento de los botones de navegación
+        document.querySelector('.next').addEventListener('click', showNextImage);
+        document.querySelector('.prev').addEventListener('click', showPrevImage);
+    </script>
+</body>
+
+</html>
